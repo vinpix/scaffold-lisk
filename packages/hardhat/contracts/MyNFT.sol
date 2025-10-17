@@ -18,3 +18,4 @@ contract MyNFT is ERC721 {
         return _tokenIdCounter;
     }
 }
+
