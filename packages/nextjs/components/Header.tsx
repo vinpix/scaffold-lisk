@@ -27,9 +27,17 @@ export const menuLinks: HeaderMenuLink[] = [
     icon: <HomeIcon className="h-4 w-4" />,
   },
   {
+    label: "Events",
+    href: "/events",
+  },
+  {
     label: "Debug Contracts",
     href: "/debug",
     icon: <BugAntIcon className="h-4 w-4" />,
+  },
+  {
+    label: "Block Explorer",
+    href: "/blockexplorer",
   },
 ];
 
@@ -105,9 +113,11 @@ export const Header = () => {
             <span className="text-xs">Ethereum dev stack</span>
           </div>
         </Link>
-        <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">
-          <HeaderMenuLinks />
-        </ul>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
+            <HeaderMenuLinks />
+          </ul>
+        </div>
       </div>
       <div className="navbar-end flex-grow mr-4">
         <RainbowKitCustomConnectButton />
